@@ -1,0 +1,178 @@
+@import "breakpoints";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'sano-serif';
+  box-sizing: border-box;
+  background: #212121;
+  color: #ecf0f1 
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px #383636;
+
+  .logo{
+    font-size: 24px;
+    &__inner{
+      padding: 6px;
+      border-radius: 6px;
+      color: #212121 ;
+      background: #f1c40f;
+    }
+  }
+
+  nav{
+    margin-left: 48px;
+    font-weight: 300;
+
+    a {
+      margin-left: 12px;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease-in-out;
+
+      &:first-child{
+        margin-left: 0;
+      }
+
+      &:hover{
+        background: #383636;
+      }
+    }
+  }
+  @include md {
+    nav{
+      display: flex;
+      flex-flow: column;
+    }
+    a {
+      margin-left: 20px;
+    }
+  }
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 24px;
+
+  &.flex{
+    display: flex;
+    align-items: center;
+  }
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+
+  .intro__block{
+    background-image: url("img/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+
+    &__overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(33, 33, 33, 0.8);
+      display: flex;
+      align-items: center;// Ox
+      justify-content: center;// Oy
+    }
+
+    &__motto{
+      font-size: 42px;
+      background: transparent;
+      position: relative;
+      font-weight: 300;
+      padding: 24px;
+
+      &::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 15%;
+        height: 5px;
+        background: #f1c40f;
+      }
+
+      &::after{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right: 0;
+        width: 15%;
+        height: 5px;
+        background: #f1c40f;
+      }
+    }
+  }
+
+  .features__block{
+    display: flex;
+
+    &__item{
+      flex: 1;
+      border-left: solid 1px #383636;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child{
+        border: none;
+      }
+
+      &__title {
+        position: relative;
+        padding-top: 14px;
+        margin-top: 12px;
+
+        &::before{
+          position: absolute;
+          content: "";
+          top: 0;
+          left: calc(50% - 14px);
+          width: 28px;
+          height: 5px;
+          background: #f1c40f;
+        }
+      }
+    }
+  }
+
+  .benefits__block{
+
+    &__item{
+      flex: 1;
+      display: flex;
+      margin-top: 30px;
+
+      .list-img{
+        width: 17px;
+        height: auto;
+      }
+
+      &__description{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 5px;
+      }
+    }
+  }
+}

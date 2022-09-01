@@ -1,0 +1,23 @@
+{
+  "name": "kl-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  },
+  "scripts": {
+    "start": "npx parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monkov/kl-1.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/monkov/kl-1/issues"
+  },
+  "homepage": "https://github.com/monkov/kl-1#readme",
+  "description": ""
+}
