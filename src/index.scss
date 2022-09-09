@@ -175,4 +175,30 @@ main{
       }
     }
   }
+  .advertisment__block{
+    display: flex;
+    flex-flow: row;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    &__images{
+      position: relative;
+      &__cover{
+        position: absolute;
+        margin-left: -90%;
+        margin-top: 10%;
+      }
+    }
+    &__description{
+      margin-left: 40px;
+
+      &__title{
+        font-weight: 200;
+      }
+
+      &__text{
+        padding-top: 10px;
+        font-weight: 100;         
+      }
+    }
+  }
 }
